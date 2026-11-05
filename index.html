@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracking Build - Pertemuan 4</title><link rel="stylesheet" href="./src/styles.css">
+<style>
+main{max-width:520px;margin:0 auto;padding:24px}
+a.btn{display:block;margin:12px 0;padding:14px;border-radius:10px;background:#14b8a6;
+  color:#04201c;font-weight:700;text-decoration:none;text-align:center}
+pre{background:#1e3a55;padding:10px;border-radius:8px;font-size:13px;white-space:pre-wrap}
+</style></head>
+<body>
+    <main>
+        <h1>Tracking Build</h1>
+            <p>Praktikum AVR (ITIA730591) - Pertemuan 4 - Tracking AR dengan MindAR dan Three.js</p>
+            <a class="btn" href="./image-tracking.html">Demo 1: Image Tracking</a>
+            <a class="btn" href="./face-tracking.html">Demo 2: Face Tracking</a>
+        <h3>Cek lingkungan</h3>
+    <pre id="env"></pre>
+<script>
+const lines=[];
+lines.push('Secure context (HTTPS/localhost): '+(window.isSecureContext?'ya':'TIDAK'));
+const hasCam=!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia);
+lines.push('navigator.mediaDevices.getUserMedia: '+(hasCam?'tersedia':'TIDAK tersedia'));
+lines.push('Alamat: '+location.href);
+lines.push('Browser: '+navigator.userAgent);
+document.getElementById('env').textContent=lines.join('\n');
+</script>
+</main>
+</body>
+</html>

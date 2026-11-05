@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo 1 - Image Tracking</title>
+<link rel="stylesheet" href="./src/styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/three.module.js",
+  "three/addons/": "./vendor/three/addons/"
+} }
+</script>
+</head>
+<body>
+<div id="bar">
+  <a href="./index.html">&larr; Menu</a>
+  <span id="status" data-state="idle">Belum dimulai</span>
+</div>
+<div id="container"></div>
+<div id="info">Belum ada informasi.</div>
+<div id="consent"><div class="card">
+<h1>Demo 1 - Image Tracking</h1>
+<p>Arahkan kamera ke gambar <code>assets/images/target-card.png</code>
+  (di layar laptop atau dicetak).
+  Objek 3D akan muncul di atas gambar.</p>
+<p>Aplikasi ini meminta izin kamera. Video diproses di perangkat Anda
+  dan tidak diunggah oleh aplikasi ini.</p>
+<button id="startBtn">Mulai</button>
+</div></div>
+<script type="module" src="./src/image-demo.js"></script>
+</body>
+</html>
